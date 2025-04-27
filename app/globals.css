@@ -25,7 +25,6 @@
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
 
-    /* Progress bar custom colors */
     --progress-background: rgba(59, 130, 246, 0.2);
     --progress-foreground: rgb(59, 130, 246);
   }
@@ -51,7 +50,6 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
 
-    /* Progress bar custom colors */
     --progress-background: rgba(96, 165, 250, 0.2);
     --progress-foreground: rgb(96, 165, 250);
   }
@@ -66,7 +64,6 @@
   }
 }
 
-/* Custom progress bar styling */
 .progress {
   background-color: var(--progress-background);
 }
@@ -75,18 +72,15 @@
   background-color: var(--progress-foreground);
 }
 
-/* Fix alignment issues */
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-/* Ensure proper spacing in transaction list */
 .transaction-item {
   display: grid;
   align-items: center;
 }
 
-/* Fix modal positioning */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -95,15 +89,17 @@
   backdrop-filter: blur(4px);
 }
 
-/* Improve chart responsiveness */
 .recharts-responsive-container {
   width: 100% !important;
   height: 100% !important;
 }
 
-/* Fix badge alignment */
 .badge-container {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.backdrop-blur-sm {
+  transition: opacity 0.2s ease;
 }

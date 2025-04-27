@@ -7,6 +7,11 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Personal Finance Visualizer",
   description: "Track and visualize your personal finances",
+  icons: {
+    icon: [
+      { url: '/logo.jpg' },
+    ]
+  },
 }
 
 export default function RootLayout({ children }) {

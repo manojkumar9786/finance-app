@@ -67,6 +67,8 @@ export default function Home() {
     fetchTransactions()
   }, [])
 
+  console.log('editingTransaction', editingTransaction)
+
   const handleAddTransaction = async (transaction) => {
     try {
       if (editingTransaction) {
@@ -176,8 +178,11 @@ export default function Home() {
             </Button>
             <button
               onClick={() => {
-                setEditingTransaction(null)
-                setIsModalOpen(true)
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                setTimeout(() => {
+                  setEditingTransaction(null);
+                  setIsModalOpen(true);
+                }, 300);
               }}
               className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 gap-2"
             >
@@ -242,7 +247,7 @@ export default function Home() {
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="dashboard" className="space-y-6">
+          <TabsContent value="dashboard" className="space-y-6 !overflow-x-hidden">
             <DashboardCards transactions={transactions} />
 
             <div className="grid gap-6 md:grid-cols-2">

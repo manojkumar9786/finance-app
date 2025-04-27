@@ -165,8 +165,8 @@ export function TransactionList({ transactions, onEdit, onDelete, isLoading }) {
                         variant="ghost"
                         size="icon"
                         onClick={() => {
-                          onEdit(transaction);
                           window.scrollTo({ top: 0, behavior: 'smooth' });
+                          onEdit(transaction);
                         }}
                         className="h-8 w-8"
                       >

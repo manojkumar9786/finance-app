@@ -128,7 +128,7 @@ export function TransactionForm({
               <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-[var(--radix-dropdown-menu-trigger-width)] bg-white p-2 space-y-1">
+          <DropdownMenuContent className="w-[var(--radix-dropdown-menu-trigger-width)] z-50 bg-white dark:bg-[#0F172A] backdrop-blur-0 p-2 space-y-1">
             {categories.map((category) => (
               <DropdownMenuItem
                 key={category}
